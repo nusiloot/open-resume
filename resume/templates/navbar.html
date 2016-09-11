@@ -1,0 +1,13 @@
+<nav>
+  <div class="nav-wrapper teal row">
+    <div class="col m12 l10 offset-l2">
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        {% include "navbar-components.html" with person=person %}
+      </ul>
+      <ul id="slide-out" class="side-nav hide-on-large-only">
+        {% include "navbar-components.html" with person=person %}
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </div>
+  </div>
+</nav>

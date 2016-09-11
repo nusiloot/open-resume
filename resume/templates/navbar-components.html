@@ -1,0 +1,7 @@
+<li><a href="/">À propos</a></li>
+{% if person.has_studies %}
+  <li><a href="/studies">Études</a></li>
+{% endif %}
+{% if person.has_skills %}
+  <li><a href="/skills">Compétences</a></li>
+{% endif %}

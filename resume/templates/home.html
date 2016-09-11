@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+{% block content %}
+  <div id="profile-header" class="parallax-container">
+    <div class="parallax">
+      <img src="{{ person.get_profile_background }}">
+    </div>
+  </div>
+  <div id="profile-card" class="card-panel">
+    <div class="row valign-wrapper content">
+      <div class="col offset-l2 l5 m8 s12">
+        <h1>{{ person.job_title }}</h1>
+
+        <h3>{{ person.name }} {{ person.first_name }}</h3>
+
+        <p>
+          {{ person.address }}<br/>
+          {{ person.postal_code }} {{ person.city }}<br/>
+          {{ person.phone_number }}<br/>
+          {{ person.mail }}
+        </p>
+      </div>
+      <div class="col m3 s12">
+        <img class="circle responsive-img valign" src="{{ person.get_profile_picture }}">
+      </div>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="{% static "img/bg.png" %}">
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+  <div id="profile-header" class="parallax-container">
+    <div class="parallax">
+      <img src="{{ person.get_profile_background }}">
+    </div>
+  </div>
+  <div id="profile-card" class="card-panel">
+    <div class="row content">
+      <div class="col l10 offset-l1">
+        <div class="page-title">
+          <h1 class="right-align">Compétences</h1>
+        </div>
+          <ul class="collapsible popout" data-collapsible="accordion">
+            {% for cat in skills_categories %}
+              <li>
+                <div class="collapsible-header">{{ cat }}</div>
+                <div class="collapsible-body"><p>{% lorem %}</p></div>
+              </li>
+            {% endfor %}
+          </ul>
+      </div>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="{% static "img/bg.png" %}">
+    </div>
+  </div>
+{% endblock %}

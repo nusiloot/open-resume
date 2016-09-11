@@ -1,0 +1,8 @@
+.idea/**
+**/__pycache__/**
+**/*.pyc
+components**
+open_resume/local_settings.py
+.directory
+generated**
+db.sqlite3

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+{% block content %}
+  <div id="profile-header" class="parallax-container">
+    <div class="parallax">
+      <img src="{{ person.get_profile_background }}">
+    </div>
+  </div>
+  <div id="profile-card" class="card-panel">
+    <div class="row content">
+      <div class="col l10 offset-l1">
+        <div class="page-title">
+          <h1 class="right-align">Études</h1>
+        </div>
+        {% for study in studies %}
+          <div class="studies-entry col m4">
+            <h4 class="right-align">{{ study.get_period }}</h4>
+          </div>
+          <div class="studies-entry-detail col m6 offset-m1">
+            <h4 class="studies-entry-title">{{ study.get_complete_study_title }}</h4>
+            <h5 class="studies-entry-subtitle">{{ study.get_complete_school_name }}</h5>
+            <p class="studies-entry-content">{{ study.comment }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="{% static "img/bg.png" %}">
+    </div>
+  </div>
+{% endblock %}

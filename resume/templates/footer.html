@@ -1,0 +1,11 @@
+<footer class="page-footer teal">
+  <div class="row valign-wrapper">
+    <div class="col s12 center-align valign white-text footer-container">
+      <b>{{ person.name }} {{ person.first_name }} </b>
+      - {{ person.address }} {{ person.postal_code }} {{ person.city }}
+      {% if person.phone_number %}
+        - {{ person.phone_number }}
+      {% endif %}
+    </div>
+  </div>
+</footer>

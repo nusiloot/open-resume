@@ -1,0 +1,41 @@
+#profile-card {
+  margin: 0;
+  color: #455a64;
+}
+
+#profile-header {
+  height: 200px;
+}
+
+@media (max-width: 600px) {
+  #profile-card .content {
+    display: flex;
+    flex-flow: column-reverse;
+    text-align: center;
+  }
+
+  #profile-card .content img {
+    display: block;
+    margin: auto;
+  }
+}
+
+footer.page-footer, .page-footer .footer-container {
+  margin: 0;
+  padding: 0;
+}
+
+.page-footer .row {
+  margin: 0;
+  height: 50px;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#main-content {
+  flex: 1 0 auto;
+}
